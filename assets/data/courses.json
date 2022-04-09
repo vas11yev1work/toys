@@ -14,5 +14,37 @@
   {
     "name": "Психология",
     "image": "course4.png"
+  },
+  {
+    "name": "Основы программирования",
+    "image": "course2.png"
+  },
+  {
+    "name": "Рисование",
+    "image": "course1.png"
+  },
+  {
+    "name": "Психология",
+    "image": "course4.png"
+  },
+  {
+    "name": "Сексуальная грамотность",
+    "image": "course3.png"
+  },
+  {
+    "name": "Основы программирования",
+    "image": "course2.png"
+  },
+  {
+    "name": "Рисование",
+    "image": "course1.png"
+  },
+  {
+    "name": "Психология",
+    "image": "course4.png"
+  },
+  {
+    "name": "Сексуальная грамотность",
+    "image": "course3.png"
   }
 ]
