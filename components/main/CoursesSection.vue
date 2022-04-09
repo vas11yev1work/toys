@@ -14,28 +14,32 @@
             <img src="@/assets/images/courses.svg" alt="courses">
           </div>
           <div class="courses-wrap desktop">
-            <div class="courses-content">
-              <div v-for="(course, i) in coursesList" :key="i" class="course">
-                <div class="image-wrap">
-                  <!-- TODO: change to <img> when will the backend appear -->
-                  <Image :slug="course.image" />
+            <Flicking :options="{ bound: true, circular: true }" :plugins="dPlugins">
+              <div v-for="(courses, n) in desktopCourses" :key="n"  class="courses-content" style="margin-right: 30px;">
+                <div v-for="(course, i) in courses" :key="`${n}-${i}`" class="course">
+                  <div class="image-wrap">
+                    <!-- TODO: change to <img> when will the backend appear -->
+                    <Image :slug="course.image" />
+                  </div>
+                  <span class="name">{{ course.name }}</span>
                 </div>
-                <span class="name">{{ course.name }}</span>
               </div>
-            </div>
-            <div class="actions">
-              <div class="arrows">
-                <Button icon rounded class="arrow">
-                  <img src="@/assets/images/c-arrow-left.svg" alt="arrow">
-                </Button>
-                <Button icon rounded>
-                  <img src="@/assets/images/c-arrow-right.svg" alt="arrow">
-                </Button>
-              </div>
-              <div class="read-more">
-                <Button href="#">Подробнее о курсах&nbsp;&nbsp;&nbsp;›</Button>
-              </div>
-            </div>
+              <template #viewport>
+                <div class="actions">
+                  <div class="arrows">
+                    <Button icon rounded class="arrow flicking-arrow-prev">
+                      <img src="@/assets/images/c-arrow-left.svg" alt="arrow">
+                    </Button>
+                    <Button icon rounded class="flicking-arrow-next">
+                      <img src="@/assets/images/c-arrow-right.svg" alt="arrow">
+                    </Button>
+                  </div>
+                  <div class="read-more">
+                    <Button href="#">Подробнее о курсах&nbsp;&nbsp;&nbsp;›</Button>
+                  </div>
+                </div>
+              </template>
+            </Flicking>
           </div>
           <div class="courses-wrap mobile">
             <Flicking :options="{ bound: true, circular: true }" :plugins="plugins">
@@ -68,7 +72,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, computed } from 'vue'
 import courses from '@/assets/data/courses.json';
 import Image from '~/components/basic/Image.vue'
 import Button from '~/components/basic/Button.vue'
@@ -82,8 +86,20 @@ export default defineComponent({
     // TODO: move to store maybe? (because we have courses page)
     const coursesList = ref<Course[]>(courses);
     const plugins = [new Arrow()]
+    const dPlugins = [new Arrow()]
 
-    return { coursesList, plugins }
+    const desktopCourses = computed(() => {
+      return unflat(coursesList.value, 4);
+    })
+
+    function unflat(src: any[], count: number) {
+      const result = [];
+      for (let s = 0, e = count; s < src.length; s += count, e += count)
+        result.push(src.slice(s, e));
+      return result;
+    }
+
+    return { coursesList, plugins, desktopCourses, dPlugins }
   }
 })
 </script>
@@ -186,6 +202,9 @@ h2 {
 }
 .mobile {
   display: none;
+}
+.courses-wrap {
+  max-width: 684px;
 }
 @media screen and (max-width: 550px) {
   .courses-section {
