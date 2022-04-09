@@ -1,0 +1,417 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: #1e1c57;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    background: linear-gradient(88.62deg, #1e1c57 12.62%, #12103a 95.96%);
+    border-radius: 26px;
+    font-size: 16px;
+    overflow-x: hidden;
+    /*min-width: 1420px;*/
+}
+
+.fancybox__slide {
+    padding-bottom: 48px !important;
+}
+
+.main-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    color: #fff;
+    padding-top: 40px;
+}
+
+p {
+    margin: 0;
+}
+
+ul, li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 1550px) {
+    .container {
+        overflow: hidden;
+    }
+}
+
+header {
+    color: #fff;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+}
+
+header:before {
+    content: '';
+    background-image: url('@/assets/images/planet-1.svg');
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 218px;
+    height: 299px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1745px) {
+    header:before {
+        display: none;
+    }
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul.nav {
+    display: flex;
+}
+
+ul.nav li {
+    margin-left: 25px;
+}
+
+ul.nav li:first-child {
+    margin-left: 0;
+}
+
+ul.nav li a {
+    color: #fff;
+    letter-spacing: 0.08em;
+    -webkit-transition: color .3s ease-out;
+    -moz-transition: color .3s ease-out;
+    -o-transition: color .3s ease-out;
+    transition: color .3s ease-out;
+}
+
+ul.nav li a:hover {
+    color: #fe6205;
+}
+
+.background-1 {
+    position: absolute;
+    background-image: url('@/assets/images/bg-1.svg');
+    height: 1684px;
+    left: 0;
+    width: 100%;
+    background-position: right top -150px;
+    background-size: cover;
+}
+
+.background-2 {
+    position: absolute;
+    background-image: url('@/assets/images/bg-2.svg');
+    height: 1440px;
+    left: 0;
+    width: 100%;
+    background-position: right top -360px;
+    background-size: cover;
+}
+
+.background-3 {
+    position: absolute;
+    background-image: url('@/assets/images/bg-3.svg');
+    height: 2051px;
+    left: 0;
+    width: 100%;
+    background-position: right bottom;
+    background-size: cover;
+}
+
+.hidden-test-section .background-3 {
+    height: 1100px;
+}
+
+.hidden-test-section-content {
+    height: 410px;
+    position: relative;
+}
+
+.background-4 {
+    background-image: url('@/assets/images/rocket.svg');
+    background-position: left top;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 820px;
+    width: 923px;
+    left: 0;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+section {
+    position: relative;
+}
+
+.main-section {
+    padding-top: 90px;
+    padding-bottom: 260px;
+    position: relative;
+}
+
+.main-section .before {
+    position: absolute;
+    width: 86px;
+    height: 197px;
+    background-image: url('@/assets/images/planet-3.svg');
+    bottom: 100px
+}
+
+.main-section .container {
+    display: flex;
+    align-items: stretch;
+}
+
+.main-section .image {
+    position: relative;
+    width: 845px;
+    flex-shrink: 0;
+}
+
+.main-section .image img {
+    left: -120px;
+    position: absolute;
+    width: 930px;
+    top: 0;
+    z-index: 2;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.main-section .content {
+    color: #fff;
+    margin-left: 25px;
+}
+
+.main-section .tag {
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background: #454568;
+    padding: 5px 15px;
+    display: inline-block;
+}
+
+.main-section .title {
+    font-size: 46px;
+    line-height: 56px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.main-section .description {
+    line-height: 164.5%;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.main-section .description p:first-child {
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 56px;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 46px;
+    line-height: 56px;
+    margin: 0;
+}
+
+.inner-page-container {
+    padding-bottom: 60px;
+}
+
+.inner-page-container h1 {
+    padding-bottom: 40px;
+}
+
+section h2 {
+    text-align: center;
+    color: #fff;
+}
+
+.reason-items {
+    padding-top: 60px;
+    display: flex;
+}
+
+.reason-item {
+    margin-right: 140px;
+}
+
+@media screen and (max-width: 1480px) {
+    .reason-items {
+        justify-content: space-between;
+    }
+
+    .reason-item {
+        margin-right: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.reason-item:last-child {
+    margin-right: 0;
+}
+
+.reason-item .image {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.reason-item:first-child .image {
+    margin-top: 40px;
+}
+
+.reason-item:nth-child(2) .image {
+    margin-top: 74px;
+}
+
+.reason-item .image img {
+    max-width: 360px;
+}
+
+.reason-item .title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.reason-item .description {
+    font-size: 16px;
+    line-height: 175%;
+    text-align: center;
+    color: #fff;
+}
+
+.test-section {
+    padding-top: 70px;
+    padding-bottom: 256px;
+    position: relative;
+    background-image: url('@/assets/images/bg-4.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.test-section .before,
+.hidden-test-section-content .before {
+    content: '';
+    background-image: url('@/assets/images/planet-2.svg');
+    display: block;
+    position: absolute;
+    top: -130px;
+    right: 0;
+    width: 118px;
+    height: 201px;
+}
+
+.test-section h2 {
+    margin-bottom: 84px;
+}
+
+footer {
+    background-image: url('@/assets/images/footer-bg.svg');
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;
+    padding-top: 110px;
+    position: relative;
+    z-index: 2;
+}
+
+footer .top-row {
+    margin-bottom: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 148%;
+    color: #fff;
+    opacity: 0.5;
+    padding-bottom: 60px;
+}
+
+body .fancybox__backdrop {
+    background: rgba(28, 32, 81, 0.85);
+}
+
+._typography p {
+    margin-bottom: 30px;
+    line-height: 25px;
+}
+
+header .btn.btn-outline,
+footer .btn.btn-outline {
+    padding-left: 35px;
+    padding-right: 35px;
+    font-weight: 500;
+    color: #fff;
+}

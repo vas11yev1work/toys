@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "start": "node --experimental-modules .output/server/index.mjs",
+    "postinstall": "patch-package"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.4.1",
+    "@types/js-cookie": "^3.0.1",
+    "@types/vue-the-mask": "^0.11.1",
+    "firebase-admin": "^10.0.1",
+    "firebase-functions": "^3.16.0",
+    "firebase-functions-test": "^0.3.3",
+    "nuxt3": "^3.0.0-27335375.b41a1d2",
+    "patch-package": "^6.4.7",
+    "pug": "^3.0.2"
+  },
+  "dependencies": {
+    "@egjs/flicking-plugins": "^4.3.0",
+    "@egjs/vue3-flicking": "^4.5.2",
+    "@fancyapps/ui": "^4.0.12",
+    "@pinia/nuxt": "^0.1.6",
+    "cookie": "^0.4.1",
+    "firebase": "^9.6.1",
+    "js-cookie": "^3.0.1",
+    "pinia": "^2.0.6",
+    "pinia-plugin-persistedstate": "^1.0.2",
+    "tiny-emitter": "^2.1.0",
+    "vue-slider-component": "^4.0.0-beta.4",
+    "vue-social-sharing": "^4.0.0-alpha4",
+    "vue-the-mask": "^0.11.1"
+  }
+}

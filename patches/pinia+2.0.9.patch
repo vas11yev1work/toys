@@ -1,0 +1,12 @@
+diff --git a/node_modules/pinia/dist/pinia.mjs b/node_modules/pinia/dist/pinia.mjs
+index 238dcdf..5a685de 100644
+--- a/node_modules/pinia/dist/pinia.mjs
++++ b/node_modules/pinia/dist/pinia.mjs
+@@ -1553,6 +1553,7 @@ function createSetupStore($id, setup, options = {}, pinia, hot) {
+             assign(store, extensions);
+         }
+         else {
++            extender = extender.default || extender; // make pinia-plugin-persistedstate work (cyanerd)
+             assign(store, scope.run(() => extender({
+                 store,
+                 app: pinia._a,

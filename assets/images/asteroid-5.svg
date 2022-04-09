@@ -1,0 +1,25 @@
+<svg width="107" height="107" viewBox="0 0 107 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_131_1071)">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M47.6812 72.4979L10.0604 58.3924L9.2872 44.2304L41.3168 13.106L63.4272 26.7871L61.5698 64.0968L47.6812 72.4979Z" fill="#0059FF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8142 60.4385L47.6812 72.4979L61.5698 64.0968L63.4272 26.7872L28.8142 60.4385Z" fill="url(#paint0_linear_131_1071)"/>
+        <path opacity="0.55" fill-rule="evenodd" clip-rule="evenodd" d="M61.5699 64.0965L55.5355 54.2152L41.3169 13.1057L63.4274 26.7869L61.5699 64.0965Z" fill="#00C5FF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M61.5698 64.0968L55.5354 54.2155L41.0151 63.1351L47.6812 72.4979L61.5698 64.0968Z" fill="#12908B"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M41.015 63.1351L9.28721 44.2304L10.0604 58.3924L47.6812 72.4979L41.015 63.1351Z" fill="url(#paint1_linear_131_1071)"/>
+        <path opacity="0.75" fill-rule="evenodd" clip-rule="evenodd" d="M10.0604 58.3924L28.8142 60.4384L63.4272 26.7871L41.3168 13.106L9.2872 44.2304L10.0604 58.3924Z" fill="#5CF4FF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M53.5458 38.4974L56.299 44.5507L59.3728 41.4769L57.8736 34.1696L53.5458 38.4974Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M28.8141 60.4386L47.6811 72.498L10.0603 58.3926L28.8141 60.4386Z" fill="#5CF4FF"/>
+    </g>
+    <defs>
+        <linearGradient id="paint0_linear_131_1071" x1="64.0901" y1="61.5811" x2="45.8761" y2="43.3671" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#45CDFF"/>
+            <stop offset="1" stop-color="#78DBFF"/>
+        </linearGradient>
+        <linearGradient id="paint1_linear_131_1071" x1="42.4752" y1="77.7046" x2="9.14012" y2="44.3695" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#41CBC5"/>
+            <stop offset="1" stop-color="#48D5CF"/>
+        </linearGradient>
+        <clipPath id="clip0_131_1071">
+            <rect width="75.0721" height="75.0721" fill="white" transform="translate(0 53.084) rotate(-45)"/>
+        </clipPath>
+    </defs>
+</svg>
