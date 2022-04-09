@@ -51,7 +51,7 @@ export default defineComponent({
   background: #fff;
   filter: blur(2px);
   position: absolute;
-  z-index: 1;
+  z-index: 4;
   opacity: 0;
   transition: opacity .3s ease-in-out;
 }

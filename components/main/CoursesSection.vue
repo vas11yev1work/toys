@@ -74,11 +74,7 @@ import Image from '~/components/basic/Image.vue'
 import Button from '~/components/basic/Button.vue'
 import Flicking from '@egjs/vue3-flicking';
 import { Arrow } from '@egjs/flicking-plugins'
-
-interface Course {
-  name: string;
-  image: string;
-}
+import { Course } from '~/types/types'
 
 export default defineComponent({
   components: { Image, Button, Flicking },

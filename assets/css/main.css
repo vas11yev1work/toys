@@ -68,35 +68,18 @@ a {
     padding-right: 20px;
 }
 
-@media screen and (max-width: 1550px) {
-    .container {
-        overflow: hidden;
-    }
-}
+/*@media screen and (max-width: 1550px) {*/
+/*    .container {*/
+/*        overflow: hidden;*/
+/*    }*/
+/*}*/
 
 header {
     color: #fff;
     padding-top: 35px;
     padding-bottom: 35px;
     position: relative;
-}
-
-header:before {
-    content: '';
-    background-image: url('@/assets/images/planet-1.svg');
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 218px;
-    height: 299px;
-    z-index: 2;
-}
-
-@media screen and (max-width: 1745px) {
-    header:before {
-        display: none;
-    }
+    z-index: 10;
 }
 
 header .container {
@@ -414,4 +397,14 @@ footer .btn.btn-outline {
     padding-right: 35px;
     font-weight: 500;
     color: #fff;
+}
+
+.desc {
+    text-align: center;
+    font-size: 18px;
+    line-height: 165%;
+}
+
+.desc b {
+    font-weight: 600;
 }
