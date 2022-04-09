@@ -1,50 +1,62 @@
 [
   {
     "name": "Рисование",
-    "image": "course1.png"
+    "image": "course1.png",
+    "largeImage": "cc1.png"
   },
   {
     "name": "Основы программирования",
-    "image": "course2.png"
+    "image": "course2.png",
+    "largeImage": "cc2.png"
   },
   {
     "name": "Сексуальная грамотность",
-    "image": "course3.png"
+    "image": "course3.png",
+    "largeImage": "cc1.png"
   },
   {
     "name": "Психология",
-    "image": "course4.png"
+    "image": "course4.png",
+    "largeImage": "cc2.png"
   },
   {
     "name": "Основы программирования",
-    "image": "course2.png"
+    "image": "course2.png",
+    "largeImage": "cc1.png"
   },
   {
     "name": "Рисование",
-    "image": "course1.png"
+    "image": "course1.png",
+    "largeImage": "cc2.png"
   },
   {
     "name": "Психология",
-    "image": "course4.png"
+    "image": "course4.png",
+    "largeImage": "cc1.png"
   },
   {
     "name": "Сексуальная грамотность",
-    "image": "course3.png"
+    "image": "course3.png",
+    "largeImage": "cc2.png"
   },
   {
     "name": "Основы программирования",
-    "image": "course2.png"
+    "image": "course2.png",
+    "largeImage": "cc1.png"
   },
   {
     "name": "Рисование",
-    "image": "course1.png"
+    "image": "course1.png",
+    "largeImage": "cc2.png"
   },
   {
     "name": "Психология",
-    "image": "course4.png"
+    "image": "course4.png",
+    "largeImage": "cc1.png"
   },
   {
     "name": "Сексуальная грамотность",
-    "image": "course3.png"
+    "image": "course3.png",
+    "largeImage": "cc2.png"
   }
 ]

@@ -15,7 +15,9 @@
     "firebase-functions-test": "^0.3.3",
     "nuxt3": "^3.0.0-27335375.b41a1d2",
     "patch-package": "^6.4.7",
-    "pug": "^3.0.2"
+    "pug": "^3.0.2",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0"
   },
   "dependencies": {
     "@egjs/flicking-plugins": "^4.3.0",

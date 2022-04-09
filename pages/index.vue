@@ -1,5 +1,5 @@
 <template lang="pug">
-div(:class="{ 'hidden-test-section': !testStore.current }")
+div(:class="{ 'hidden-test-section': !testStore.current }" class="planet")
   .background-1
   section.main-section
     .container
@@ -83,3 +83,23 @@ export default defineComponent({
   }),
 });
 </script>
+
+<style scoped>
+.planet:before {
+  content: '';
+  background-image: url('@/assets/images/planet-1.svg');
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 218px;
+  height: 299px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1745px) {
+  .planet:before {
+    display: none;
+  }
+}
+</style>

@@ -1,7 +1,7 @@
 <template lang="pug">
 a.btn(
   :href="href"
-  :class="{ 'btn-outline': outlined, 'btn-disabled': disabled, 'btn-arrow': arrow, loading, icon, rounded }"
+  :class="{ 'btn-outline': outlined, 'btn-disabled': disabled, 'btn-arrow': arrow, loading, icon, rounded, small, sp }"
   @click="handleClick"
 )
   span(:class="{ icon }")
@@ -24,6 +24,8 @@ export default defineComponent({
     click: {type: [Function, Boolean], default: false},
     icon: { type: Boolean, default: false },
     rounded: { type: Boolean, default: false },
+    small: { type: Boolean, default: false },
+    sp: { type: Boolean, default: false },
   },
   data: () => ({
     loading: false
@@ -61,6 +63,14 @@ export default defineComponent({
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.btn.small {
+  padding: 21px 25px;
+}
+
+.btn.sp {
+  padding: 25px 38px;
 }
 
 .btn:hover {
