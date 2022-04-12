@@ -36,7 +36,7 @@ input, textarea {
   line-height: 175%;
   font-family: 'Montserrat', sans-serif;
   color: rgba(12, 0, 88, 0.61);
-  padding: 15px 36px 17px;
+  padding: 15px 20px;
   border: none;
   outline: none;
   width: 100%;
