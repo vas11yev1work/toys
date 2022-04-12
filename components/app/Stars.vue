@@ -25,15 +25,11 @@ export default defineComponent({
       const random = (min: number, max: number) => Math.floor(Math.random() * (max - min + 1) + min);
       this.active = false;
       this.stars = [];
-      setTimeout(() => {
-        const starsCount = Math.round(document.body.scrollHeight * window.innerWidth / 500000 * 1.5);
-        for (let i = 0; i <= starsCount; i++) {
-          this.stars.push({size: random(2, 6), top: random(0, document.body.scrollHeight), left: random(0, window.innerWidth)});
-        }
-      }, 800);
-      setTimeout(() => {
-        this.active = true;
-      }, 900);
+      const starsCount = Math.round(document.body.scrollHeight * (window.innerWidth - 100) / 500000 * 1.5);
+      for (let i = 0; i <= starsCount; i++) {
+        this.stars.push({size: random(2, 6), top: random(0, document.body.scrollHeight), left: random(0, window.innerWidth)});
+      }
+      this.active = true;
     }
   },
   mounted() {

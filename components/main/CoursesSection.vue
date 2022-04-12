@@ -106,7 +106,7 @@ export default defineComponent({
 
 <style scoped>
 .courses-section {
-  padding: 180px 0;
+  padding-top: 180px;
   position: relative;
 }
 h2 {
