@@ -13,7 +13,7 @@
                 <span class="duration-text">Продолжительность урока:</span>
                 <span class="duration">{{ p.duration }} <b>мин.</b></span>
               </div>
-              <Button sp style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
+              <Button class="ed-button" sp style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
               <Button outlined sp style="color: white;">Пробный урок</Button>
             </div>
           </div>
@@ -43,6 +43,9 @@ export default defineComponent({
 <style lang="scss" scoped>
 .section-content {
   margin-bottom: 150px;
+  @media screen and (max-width: 550px) {
+    margin-bottom: 50px;
+  }
   h2 {
     margin-bottom: 60px;
   }
@@ -68,6 +71,18 @@ export default defineComponent({
         top: 50%;
         left: 50%;
         transform: translateY(-50%) translateX(-50%);
+        @media screen and (max-width: 550px) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 550px) {
+        background-color: #323056;
+        margin: 0 0 20px 0 !important;
+      }
+      .ed-button {
+        @media screen and (max-width: 550px) {
+          margin-bottom: 20px;
+        }
       }
       .program-info {
         position: relative;

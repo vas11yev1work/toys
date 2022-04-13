@@ -5,6 +5,7 @@
         <img class="girl" src="@/assets/images/courses-girl.png" alt="girl">
         <div class="text-content">
           <div class="benefits">
+            <h2 class="section-title"><b>С нами</b> у тебя все получится!</h2>
             <div class="benefit">
               <span class="num">> 1.000</span>
               <span class="text">
@@ -54,6 +55,11 @@ export default defineComponent({
 <style lang="scss" scoped>
 .main-courses-section {
   position: relative;
+  .section-title {
+    text-align: left;
+    font-size: 46px;
+    margin-bottom: 20px;
+  }
   &::before {
     content: '';
     position: absolute;
@@ -88,17 +94,38 @@ export default defineComponent({
     position: relative;
     z-index: 5;
     display: flex;
+    @media screen and (max-width: 550px) {
+      padding-bottom: 50px;
+    }
     .girl {
       position: relative;
       left: -67px;
       z-index: 2;
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
     }
     .text-content {
       padding-top: 84px;
       display: flex;
+      @media screen and (max-width: 550px) {
+        flex-direction: column;
+        padding-top: 0;
+      }
       .benefits {
         margin-right: 146px;
         min-width: 211px;
+        @media screen and (max-width: 550px) {
+          width: 100%;
+          margin-right: 0;
+        }
+        .section-title {
+          display: none;
+          @media screen and (max-width: 550px) {
+            display: block;
+            margin-bottom: 50px;
+          }
+        }
         .benefit {
           margin-bottom: 38px;
           .num {
@@ -120,9 +147,9 @@ export default defineComponent({
       }
       .about-us {
         .section-title {
-          text-align: left;
-          font-size: 46px;
-          margin-bottom: 20px;
+          @media screen and (max-width: 550px) {
+            display: none;
+          }
         }
         .info {
           line-height: 164.5%;
@@ -151,5 +178,8 @@ export default defineComponent({
   position: absolute;
   bottom: 0;
   z-index: 10;
+  @media screen and (max-width: 550px) {
+    display: none;
+  }
 }
 </style>

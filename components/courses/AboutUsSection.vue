@@ -89,12 +89,21 @@ export default defineComponent({
   z-index: 1;
   background-image: url('@/assets/images/c-about-us-line.svg');
   background-size: cover;
+  @media screen and (max-width: 550px) {
+    padding: 60px 0;
+  }
   h2 {
     margin-bottom: 60px;
+    @media screen and (max-width: 550px) {
+      margin-bottom: 30px;
+    }
   }
   .section-content {
     .count-blocks {
       display: flex;
+      @media screen and (max-width: 550px) {
+        flex-direction: column;
+      }
       .count-block {
         width: 100%;
         margin-right: 30px;
@@ -102,8 +111,14 @@ export default defineComponent({
         padding: 30px 26px;
         position: relative;
         z-index: 5;
+        @media screen and (max-width: 550px) {
+          margin-bottom: 20px;
+        }
         &:last-child {
           margin-right: 0;
+          @media screen and (max-width: 550px) {
+            margin-bottom: 0;
+          }
         }
         &:nth-child(2n - 1) {
           background: linear-gradient(180deg, #FF9649 0%, #FF5C00 100%);
@@ -143,6 +158,10 @@ export default defineComponent({
       width: 100%;
       margin-top: 40px;
       display: flex;
+      @media screen and (max-width: 550px) {
+        flex-direction: column;
+        margin-top: 20px;
+      }
       .benefit {
         width: 100%;
         border-radius: 30px;
@@ -152,9 +171,18 @@ export default defineComponent({
         background-repeat: no-repeat;
         background-position: center center;
         position: relative;
-        z-index: 5;
+        z-index: 6;
+        @media screen and (max-width: 550px) {
+          background-image: none !important;
+          margin-right: 0;
+          margin-bottom: 20px;
+          background-color: #323056;
+        }
         &:last-child {
           margin-right: 0;
+          @media screen and (max-width: 550px) {
+            margin-bottom: 0;
+          }
         }
         .title {
           font-weight: 700;
