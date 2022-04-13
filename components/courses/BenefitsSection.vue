@@ -71,6 +71,9 @@ export default defineComponent({
 <style lang="scss" scoped>
 .benefits-section {
   padding-bottom: 150px;
+  @media screen and (max-width: 550px) {
+    padding-bottom: 50px;
+  }
 }
 
 .section-content {
@@ -81,6 +84,9 @@ export default defineComponent({
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media screen and (max-width: 550px)  {
+      flex-direction: column;
+    }
     &::before {
       position: absolute;
       top: 0;
@@ -96,6 +102,9 @@ export default defineComponent({
       @media screen and (max-width: 1600px) {
         display: none;
       }
+      @media screen and (min-width: 1920px) {
+        background-image: url('@/assets/images/c-benefits-bg-lg.svg');
+      }
     }
     .image-wrap {
       position: relative;
@@ -105,16 +114,38 @@ export default defineComponent({
         left: -108px;
         z-index: 2;
       }
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
     }
     .benefits-list {
       padding-top: 50px;
       display: flex;
       flex-wrap: wrap;
       position: relative;
+      @media screen and (max-width: 550px) {
+        padding-top: 0;
+      }
       .benefit {
         width: 319px;
         margin-right: 155px;
         margin-bottom: 80px;
+        @media screen and (max-width: 550px) {
+          margin: 0 0 30px 0 !important;
+          width: auto;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          img {
+            margin-right: 20px;
+          }
+          .title {
+            margin: 0;
+          }
+          p {
+            margin-top: 20px;
+          }
+        }
         &:nth-child(2n) {
           margin-right: 0;
         }

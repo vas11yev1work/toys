@@ -14,7 +14,7 @@
                 «{{ expert.quote }}»
               </span>
               <div class="expert-actions">
-                <Button sp style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
+                <Button sp class="ex-btn" style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
                 <Button sp outlined style="color: white;">Пробный урок</Button>
               </div>
             </div>
@@ -78,6 +78,23 @@ export default defineComponent({
         justify-content: center;
         align-items: center;
         margin-right: 50px;
+        @media screen and (max-width: 550px) {
+          max-width: none;
+          width: 100%;
+          padding: 0 20px;
+          img {
+            width: 100%;
+          }
+          .expert-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .ex-btn {
+              margin: 0 0 20px 0 !important;
+            }
+          }
+        }
         .expert-content {
           transition: all 0.3s;
           margin-top: 25px;
@@ -109,11 +126,13 @@ export default defineComponent({
             margin-top: 30px;
           }
         }
-        &:not(.active) {
-          transform: scale(0.73) translateY(-60px);
-          .expert-content {
-            opacity: 0;
-            visibility: hidden;
+        @media screen and (min-width: 551px) {
+          &:not(.active) {
+            transform: scale(0.73) translateY(-60px);
+            .expert-content {
+              opacity: 0;
+              visibility: hidden;
+            }
           }
         }
       }
@@ -127,6 +146,10 @@ export default defineComponent({
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @media screen and (max-width: 550px) {
+          top: 20%;
+          padding: 0 30px;
+        }
       }
     }
   }

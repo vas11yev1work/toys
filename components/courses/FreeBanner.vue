@@ -10,8 +10,8 @@
         <TextField class="text-field" v-model="phone" placeholder="+7 (999) 999 - 99 - 99" />
         <TextField class="text-field" v-model="email" placeholder="Твоя электронная почта" />
       </div>
-      <Button style="margin-bottom: 13px;">Хочу на пробное занятие&nbsp;&nbsp;&nbsp;›</Button>
-      <Checkbox v-model="agreement">
+      <Button style="margin-bottom: 13px;" class="free-banner-button">Хочу на пробное занятие&nbsp;&nbsp;&nbsp;›</Button>
+      <Checkbox white v-model="agreement">
         Нажимая на кнопку, я принимаю <a href="/policy">соглашение</a><br/> на обработку моих персональных данных.
       </Checkbox>
     </form>
@@ -45,6 +45,24 @@ export default defineComponent({
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50px;
+  @media screen and (max-width: 550px) {
+    padding: 35px;
+    border-radius: 30px;
+    position: relative;
+    z-index: 10;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      background-color: black;
+      opacity: 0.3;
+      border-radius: 30px;
+    }
+  }
   h3 {
     font-weight: 600;
     font-size: 36px;
@@ -59,14 +77,34 @@ export default defineComponent({
     margin-top: 30px;
     .fields {
       display: flex;
+      @media screen and (max-width: 550px) {
+        flex-direction: column;
+      }
     }
     .text-field {
       max-width: 245px;
       margin-right: 25px;
       width: 100%;
+      @media screen and (max-width: 550px) {
+        max-width: none !important;
+      }
       &:last-child {
         max-width: 281px;
         margin-right: 0;
+      }
+    }
+    .free-banner-button {
+      @media screen and (max-width: 550px) {
+        //padding: 25px 10px;
+        padding: 25px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .agree {
+      @media screen and (max-width: 550px) {
+        color: white;
       }
     }
   }

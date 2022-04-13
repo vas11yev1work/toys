@@ -150,4 +150,8 @@ span.icon {
   width: 70px;
   border-radius: 50%;
 }
+.icon.rounded.small {
+  height: 50px;
+  width: 50px;
+}
 </style>

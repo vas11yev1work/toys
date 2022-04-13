@@ -6,7 +6,7 @@ InputContainer
     :checked="modelValue"
     @change="$emit('update:modelValue', $event.target.checked)"
   )
-  label(:for="id"): slot
+  label(:for="id" :class="{ white }"): slot
 </template>
 
 <script lang="ts">
@@ -19,6 +19,7 @@ export default defineComponent({
   }),
   props: {
     modelValue: {type: Boolean, default: false},
+    white: {type: Boolean, default: false},
   },
   components: {InputContainer}
 });
@@ -78,5 +79,10 @@ label:after {
 
 input[type="checkbox"]:checked + label:after {
   display: block;
+}
+@media screen and (max-width: 550px) {
+  .white {
+    color: white;
+  }
 }
 </style>

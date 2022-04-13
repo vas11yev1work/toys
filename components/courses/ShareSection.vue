@@ -18,9 +18,9 @@
               <img src="@/assets/images/share-vi.svg" alt="share">
             </a>
           </div>
-          <Button style="margin-top: 40px;">Скопировать ссылку&nbsp;&nbsp;&nbsp;›</Button>
+          <Button class="share-btn" style="margin-top: 40px;">Скопировать ссылку&nbsp;&nbsp;&nbsp;›</Button>
         </div>
-        <img src="@/assets/images/share-section-girl.png" alt="girl">
+        <img class="girl" src="@/assets/images/share-section-girl.png" alt="girl">
       </div>
     </div>
     <img class="clouds" src="@/assets/images/share-clouds.svg" alt="clouds">
@@ -40,11 +40,23 @@ export default defineComponent({
 .share-section {
   margin-top: 150px;
   position: relative;
+  @media screen and (max-width: 550px) {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  .share-btn {
+    @media screen and (max-width: 550px) {
+      padding: 25px 30px;
+    }
+  }
   .clouds {
     position: absolute;
     bottom: -50px;
     z-index: 1;
     width: 100%;
+    @media screen and (max-width: 550px) {
+      display: none;
+    }
   }
   &::before {
     content: '';
@@ -56,6 +68,9 @@ export default defineComponent({
     width: 100%;
     background-repeat: no-repeat;
     z-index: 4;
+    @media screen and (max-width: 550px) {
+      display: none;
+    }
   }
   &::after {
     content: '';
@@ -68,6 +83,17 @@ export default defineComponent({
     background-repeat: no-repeat;
     background-position: right;
     z-index: 4;
+    @media screen and (max-width: 550px) {
+      height: 400px;
+      width: 400px;
+      background-size: contain;
+      bottom: -150px;
+    }
+  }
+  .girl {
+    @media screen and (max-width: 550px) {
+      display: none;
+    }
   }
   .section-content {
     z-index: 5;
