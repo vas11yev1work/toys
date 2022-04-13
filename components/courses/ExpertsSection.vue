@@ -15,7 +15,7 @@
               </span>
               <div class="expert-actions">
                 <Button sp class="ex-btn" style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
-                <Button sp outlined style="color: white;">Пробный урок</Button>
+                <Button sp class="ex-btn" outlined style="color: white;">Пробный урок</Button>
               </div>
             </div>
           </div>
@@ -90,9 +90,9 @@ export default defineComponent({
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            .ex-btn {
-              margin: 0 0 20px 0 !important;
-            }
+            //.ex-btn {
+            //  margin: 0 0 20px 0 !important;
+            //}
           }
         }
         .expert-content {
@@ -124,6 +124,18 @@ export default defineComponent({
           .expert-actions {
             display: flex;
             margin-top: 30px;
+            @media screen and (max-width: 550px) {
+              width: 100%;
+              .ex-btn {
+                margin: 0 0 20px 0 !important;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                &:last-child {
+                  margin: 0 !important;
+                }
+              }
+            }
           }
         }
         @media screen and (min-width: 551px) {

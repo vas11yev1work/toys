@@ -14,7 +14,7 @@
                 <span class="duration">{{ p.duration }} <b>мин.</b></span>
               </div>
               <Button class="ed-button" sp style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
-              <Button outlined sp style="color: white;">Пробный урок</Button>
+              <Button class="ed-button" outlined sp style="color: white;">Пробный урок</Button>
             </div>
           </div>
         </div>
@@ -82,8 +82,15 @@ export default defineComponent({
       .ed-button {
         @media screen and (max-width: 550px) {
           margin-bottom: 20px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
+
       .program-info {
         position: relative;
         h4 {

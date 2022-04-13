@@ -4,7 +4,7 @@
     <h2><b>Если твой ответ «ДА»,</b> <br>наши курсы помогут тебе</h2>
     <p><b>Мы создали проект “Toys” для себя и для таких же современных родителей и детей.</b> Сейчас это международный проект, в котором занимаются тысячи детей, нам удалось сохранить семейный подход и <b>теплоту на каждом уроке курса.</b></p>
     <Button sp class="banner-btn" style="margin-right: 30px;">Подобрать курс&nbsp;&nbsp;&nbsp;›</Button>
-    <Button sp style="color: white" outlined>Наши эксперты</Button>
+    <Button sp class="banner-btn" style="color: white" outlined>Наши эксперты</Button>
   </div>
 </template>
 
@@ -53,7 +53,15 @@ export default {
     }
   }
   .banner-btn {
-    margin-bottom: 20px;
+    @media screen and (max-width: 550px) {
+      margin-bottom: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 </style>
