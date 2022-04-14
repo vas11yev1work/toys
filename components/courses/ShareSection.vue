@@ -91,6 +91,7 @@ export default defineComponent({
     }
   }
   .girl {
+    transform: translateY(30px);
     @media screen and (max-width: 550px) {
       display: none;
     }
