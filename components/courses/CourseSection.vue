@@ -86,6 +86,9 @@ export default defineComponent({
     }
     .text-content {
       padding-top: 84px;
+      @media screen and (max-width: 550px) {
+        padding-top: 30px;
+      }
       h2 {
         text-align: left;
         margin-bottom: 20px;
