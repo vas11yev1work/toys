@@ -1,7 +1,10 @@
 <template>
   <div class="course-page">
+    <img src="@/assets/images/c-header-bg.svg" alt="bg" class="bg" />
+    <CourseSection />
     <ForWhomSection />
     <SkillsSection />
+    <ProgramSection />
     <BenefitsSection />
     <ExpertsSection />
     <div class="container">
@@ -23,12 +26,24 @@ import ShareSection from '~/components/courses/ShareSection.vue'
 import BenefitsSection from '~/components/courses/BenefitsSection.vue'
 import ForWhomSection from '~/components/courses/ForWhomSection.vue'
 import SkillsSection from '~/components/courses/SkillsSection.vue'
+import CourseSection from '~/components/courses/CourseSection.vue'
+import ProgramSection from '~/components/courses/ProgramSection.vue'
 
 export default defineComponent({
-  components: { SkillsSection, ForWhomSection, BenefitsSection, ShareSection, LessonsLevels, FreeBanner, ExpertsSection }
+  components: { ProgramSection, CourseSection, SkillsSection, ForWhomSection, BenefitsSection, ShareSection, LessonsLevels, FreeBanner, ExpertsSection }
 })
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+  @media screen and (max-width: 1630px) {
+    display: none;
+  }
+}
 </style>

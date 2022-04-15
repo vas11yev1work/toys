@@ -51,24 +51,18 @@ export default defineComponent({
 .for-whom-section {
   padding: 150px 0;
   position: relative;
-  //&::before {
-  //  content: '';
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  right: 0;
-  //  height: 100%;
-  //  width: 100%;
-  //  background-image: url('@/assets/images/for-whom-bg.svg');
-  //}
+  @media screen and (max-width: 550px) {
+    padding: 60px 0;
+  }
   .bg {
     position: absolute;
-    top: 0; // TODO: -100px
+    top: -50px;
     left: 0;
     right: 0;
     height: 100%;
     width: 100%;
     z-index: 1;
+    object-fit: cover;
   }
   .section-content {
     position: relative;
@@ -81,6 +75,14 @@ export default defineComponent({
       grid-template-columns: 1fr 1fr 1fr 1fr;
       border-radius: 50px;
       overflow: hidden;
+      @media screen and (max-width: 550px) {
+        grid-template-columns: 1fr;
+      }
+      img {
+        @media screen and (max-width: 550px) {
+          display: none;
+        }
+      }
       .step {
         padding: 50px;
         color: white;
@@ -93,6 +95,26 @@ export default defineComponent({
             background: linear-gradient(180deg, #FF9649 0%, #FF5C00 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: #FF9649;
+          }
+        }
+        @media screen and (max-width: 550px) {
+          &:nth-child(6) {
+            background: linear-gradient(180deg, #FF9649 0%, #FF5C00 100%);
+            .count {
+              color: white !important;
+              background: none;
+              -webkit-text-fill-color: currentcolor;
+            }
+          }
+          &:nth-child(8) {
+            background: linear-gradient(277.57deg, #2E2B88 0.3%, #383585 104.44%, #0B104F 112.2%, #514E9C 139.11%);
+            .count {
+              background: linear-gradient(180deg, #FF9649 0%, #FF5C00 100%);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              color: #FF9649;
+            }
           }
         }
         .count {

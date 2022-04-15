@@ -136,6 +136,7 @@ export default defineComponent({
             background: linear-gradient(180deg, #FF9649 0%, #FF5C00 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            color: #FF9649;
           }
           .text {
             line-height: 164.5%;
