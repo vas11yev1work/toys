@@ -1,9 +1,9 @@
 <template>
   <div class="courses-section">
     <div class="section-content desktop">
-      <h2><b>Хочешь овладеть</b> одним <br> из  этих навыков?</h2>
+      <h2><b>Хочешь овладеть</b> одним <br> из этих навыков?</h2>
       <div class="courses">
-        <Flicking :options="{ circular: true }" :plugins="plugins">
+        <Flicking :options="{ circular: true }" :plugins="mPlugins">
           <div v-for="(course, i) in coursesList" :key="i" class="course">
             <div class="card">
               <div class="front">
@@ -11,7 +11,7 @@
               </div>
               <div class="info">
                 <p><b>На занятиях ты освоишь методы шифрования данных</b>, узнаешь основы информационной безопасности и <b>научишься программировать</b> на популярном языке Python.</p>
-                <Button small>Подробно о курсе&nbsp;&nbsp;&nbsp;›</Button>
+                <Button href="/courses/it" small>Подробно о курсе&nbsp;&nbsp;&nbsp;›</Button>
               </div>
             </div>
             <span class="name">{{ course.name }}</span>
@@ -78,8 +78,9 @@ export default defineComponent({
   setup() {
     const coursesList = ref<Course[]>(courses);
     const plugins = [new Arrow()]
+    const mPlugins = [new Arrow()]
 
-    return { coursesList, plugins }
+    return { coursesList, plugins, mPlugins }
   }
 })
 </script>

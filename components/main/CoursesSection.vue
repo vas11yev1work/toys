@@ -2,12 +2,11 @@
   <div class="courses-section">
     <div class="container">
       <div class="content">
-        <h2>Хочешь научиться учиться?</h2>
+        <h2>Хочешь раскрыть свои способности?</h2>
         <div class="info-card">
           <span class="info-text">
-            <b>Мы научим тебя практическим навыкам</b>, которые будут полезны в будущем. Занятия проходят онлайн, <b>а вместо скучных контрольных</b>  ты создашь реальные проекты
+            Занятия проходят онлайн <b>в любое удобное время и в любом месте</b>
           </span>
-          <span class="info-point">!</span>
         </div>
         <div class="courses">
           <div class="image">
@@ -15,7 +14,7 @@
           </div>
           <div class="courses-wrap desktop">
             <Flicking :options="{ bound: true, circular: true }" :plugins="dPlugins">
-              <div v-for="(courses, n) in desktopCourses" :key="n"  class="courses-content" style="margin-right: 30px;">
+              <nuxt-link v-for="(courses, n) in desktopCourses" :key="n" tag="div" to="/courses/it" class="courses-content" style="margin-right: 30px;">
                 <div v-for="(course, i) in courses" :key="`${n}-${i}`" class="course">
                   <div class="image-wrap">
                     <!-- TODO: change to <img> when will the backend appear -->
@@ -23,7 +22,7 @@
                   </div>
                   <span class="name">{{ course.name }}</span>
                 </div>
-              </div>
+              </nuxt-link>
               <template #viewport>
                 <div class="actions">
                   <div class="arrows">
@@ -121,7 +120,7 @@ h2 {
 }
 .info-card {
   background-color: #454568;
-  padding: 15px 53px 15px 20px;
+  padding: 15px 20px;
   max-width: 802px;
   z-index: 2;
   border-radius: 5px;
@@ -131,14 +130,6 @@ h2 {
 .info-text {
   font-size: 16px;
   line-height: 164.5%;
-}
-.info-point {
-  position: absolute;
-  top: 0;
-  right: 20px;
-  font-weight: 700;
-  font-size: 62px;
-  line-height: 76px;
 }
 .courses {
   display: flex;

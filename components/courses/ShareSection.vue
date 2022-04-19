@@ -3,7 +3,7 @@
     <div class="container">
       <div class="section-content">
         <div class="text-content">
-          <h3 class="title"><b>Поделись курсами</b><br> с своими друзьями</h3>
+          <h3 class="title"><b>Поделись курсами</b><br> со своими друзьями</h3>
           <div class="networks">
             <a class="network" href="#">
               <img src="@/assets/images/share-ig.svg" alt="share">

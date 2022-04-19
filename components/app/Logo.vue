@@ -1,7 +1,7 @@
 <template>
   <NuxtLink class="logo" to="/">
-    <img src="@/assets/images/logo-toys.svg" alt="logo">
-    <span class="title">TOYS</span>
+    <img src="@/assets/images/newlogo.png" alt="logo">
+<!--    <span class="title">DNK Code</span>-->
   </NuxtLink>
 </template>
 
@@ -18,6 +18,10 @@ export default defineComponent({
   display: flex;
   align-items: center;
   margin-right: 44px;
+}
+
+.title {
+  white-space: nowrap;
 }
 
 .logo img {

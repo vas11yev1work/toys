@@ -4,7 +4,7 @@
       <div class="section-content">
         <div class="text-content">
           <h2>Открываем для <br> ребенка <span>мир IT!</span></h2>
-          <p class="info-text">На занятиях <b>ребенок познакомится с клавиатурой, получит навык свободного владению мышью</b>, повысит скорость печати.</p>
+          <p class="info-text">На занятиях <b>ребенок познакомится с клавиатурой, получит навык свободного владению мышью</b>, повысит скорость печати, научится структурированию процессов и логическим взаимосвязям</p>
           <Button class="mb-button" style="margin-right: 30px;">Записаться&nbsp;&nbsp;&nbsp;›</Button>
           <Button sp outlined style="color: white; ">Пробное занятие</Button>
         </div>
@@ -100,7 +100,7 @@ export default defineComponent({
         }
       }
       p {
-        max-width: 400px;
+        max-width: 500px;
         margin-bottom: 40px;
       }
     }
