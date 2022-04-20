@@ -3,7 +3,7 @@
     <img src="@/assets/images/banner-yes.svg" alt="banner">
     <h2><b>Если твой ответ «ДА»,</b> <br>наши курсы помогут тебе</h2>
     <p><b>Мы создали проект “Toys” для себя и для таких же современных родителей и детей.</b> Сейчас это международный проект, в котором занимаются тысячи детей, нам удалось сохранить семейный подход и <b>теплоту на каждом уроке курса.</b></p>
-    <Button sp class="banner-btn" style="margin-right: 30px;">Подобрать курс&nbsp;&nbsp;&nbsp;›</Button>
+    <Button sp class="banner-btn" style="margin-right: 30px;" @click="$router.push('/courses/it')">Подобрать курс&nbsp;&nbsp;&nbsp;›</Button>
     <Button sp class="banner-btn" style="color: white" outlined>Наши эксперты</Button>
   </div>
 </template>

@@ -142,7 +142,8 @@ export default defineComponent({
   }
 
   .about-section .content h2 {
-    display: none;
+    /*display: none;*/
+    text-align: center;
   }
 
   .about-section > h2 {

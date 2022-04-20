@@ -13,7 +13,7 @@
                 <span class="duration-text">Продолжительность урока:</span>
                 <span class="duration">{{ p.duration }} <b>мин.</b></span>
               </div>
-              <Button class="ed-button" sp style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
+              <Button class="ed-button" sp style="margin-right: 30px;" @click="$router.push('/courses/it')">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
               <Button class="ed-button" outlined sp style="color: white;">Пробный урок</Button>
             </div>
           </div>

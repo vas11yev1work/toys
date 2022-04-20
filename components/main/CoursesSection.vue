@@ -34,7 +34,7 @@
                     </Button>
                   </div>
                   <div class="read-more">
-                    <Button href="#">Подробнее о курсах&nbsp;&nbsp;&nbsp;›</Button>
+                    <Button @click="$router.push('/courses')">Подробнее о курсах&nbsp;&nbsp;&nbsp;›</Button>
                   </div>
                 </div>
               </template>
@@ -42,13 +42,13 @@
           </div>
           <div class="courses-wrap mobile">
             <Flicking :options="{ bound: true, circular: true }" :plugins="plugins">
-              <div v-for="(course, i) in coursesList" :key="i" class="course">
+              <nuxt-link tag="div" to="/courses/it" v-for="(course, i) in coursesList" :key="i" class="course">
                 <div class="image-wrap">
                   <!-- TODO: change to <img> when will the backend appear -->
                   <Image :slug="course.image" />
                 </div>
                 <span class="name">{{ course.name }}</span>
-              </div>
+              </nuxt-link>
               <template #viewport>
                 <div class="arrows" style="margin-top: 20px;">
                   <Button icon rounded class="arrow flicking-arrow-prev">
@@ -61,7 +61,7 @@
               </template>
             </Flicking>
             <div class="read-more" style="margin-top: 20px;">
-              <Button href="#">Подробнее о курсах&nbsp;&nbsp;&nbsp;›</Button>
+              <Button @click="$router.push('/courses')">Подробнее о курсах&nbsp;&nbsp;&nbsp;›</Button>
             </div>
           </div>
         </div>

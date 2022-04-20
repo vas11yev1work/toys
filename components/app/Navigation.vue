@@ -1,7 +1,6 @@
 <template lang="pug">
 ul.nav
   li: a(href="#") О нас
-  li: a(href="#") Обучение в Toys
   li: nuxt-link(to="/courses") Курсы
   li: a(href="#") Наши эксперты
   li: a(href="#") Стоимость

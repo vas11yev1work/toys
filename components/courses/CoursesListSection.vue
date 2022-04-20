@@ -11,7 +11,7 @@
               </div>
               <div class="info">
                 <p><b>На занятиях ты освоишь методы шифрования данных</b>, узнаешь основы информационной безопасности и <b>научишься программировать</b> на популярном языке Python.</p>
-                <Button href="/courses/it" small>Подробно о курсе&nbsp;&nbsp;&nbsp;›</Button>
+                <Button @click="$router.push('/courses/it')" small>Подробно о курсе&nbsp;&nbsp;&nbsp;›</Button>
               </div>
             </div>
             <span class="name">{{ course.name }}</span>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="info">
                   <p class="info-text"><b>На занятиях ты освоишь методы шифрования данных</b>, узнаешь основы информационной безопасности и <b>научишься программировать</b> на популярном языке Python.</p>
-                  <Button small>Подробно о курсе&nbsp;&nbsp;&nbsp;›</Button>
+                  <Button @click="$router.push('/courses/it')" small>Подробно о курсе&nbsp;&nbsp;&nbsp;›</Button>
                 </div>
               </div>
             </div>

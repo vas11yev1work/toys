@@ -14,7 +14,7 @@
                 «{{ expert.quote }}»
               </span>
               <div class="expert-actions">
-                <Button sp class="ex-btn" style="margin-right: 30px;">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
+                <Button sp class="ex-btn" style="margin-right: 30px;" @click="$router.push('/courses/it')">Перейти к курсу&nbsp;&nbsp;&nbsp;›</Button>
                 <Button sp class="ex-btn" outlined style="color: white;">Пробный урок</Button>
               </div>
             </div>

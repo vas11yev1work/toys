@@ -13,7 +13,7 @@
         Logo
         Navigation
       .bottom-row
-        div © 2021-2022, ООО «Toys»
+        div © 2021-2022, ООО «DNK Code»
         div Сайт создан и разработан&#32;
           a(href="https://crazy.studio" target="_blank"): b CrazyStudio
         div: NuxtLink(to="/policy") Политика конфиденциальности

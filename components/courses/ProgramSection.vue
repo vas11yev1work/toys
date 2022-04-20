@@ -10,7 +10,7 @@
           <span class="info-point">!</span>
         </div>
         <div class="collapse-items">
-          <div v-for="(item, i) in items" @click="currentItem = i" :class="{ active: currentItem === i }" class="collapse-item">
+          <div v-for="(item, i) in items" @click="selectItem(i)" :class="{ active: currentItem === i }" class="collapse-item">
             <div class="content">
               <div class="title-wrap">
                 <span class="count">{{ i + 1}}.</span>
@@ -37,7 +37,7 @@ import Button from '~/components/basic/Button.vue'
 export default defineComponent({
   components: { Button },
   setup() {
-    const currentItem = ref(null);
+    const currentItem = ref<null | number>(null);
     const items = [
       {
         title: 'Настройка среды окружения.',
@@ -93,7 +93,15 @@ export default defineComponent({
       },
     ]
 
-    return { items, currentItem }
+    function selectItem(i: number) {
+      if (i === currentItem.value) {
+        currentItem.value = null;
+        return;
+      }
+      currentItem.value = i;
+    }
+
+    return { items, currentItem, selectItem }
   }
 })
 </script>
@@ -130,6 +138,7 @@ export default defineComponent({
         }
         .button-wrap {
           max-height: 50px;
+          transition: 0.3s;
         }
         .count {
           font-weight: 800;
@@ -162,6 +171,9 @@ export default defineComponent({
             max-height: 500px;
             opacity: 1;
             visibility: visible;
+          }
+          .button-wrap {
+            transform: rotateZ(45deg);
           }
         }
       }

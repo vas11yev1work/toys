@@ -62,7 +62,6 @@ export default defineComponent({
       if (!this.form.name) this.errors.name = 'Это поле необходимо заполнить';
 
       if (!this.form.phone) this.errors.phone = 'Это поле необходимо заполнить';
-      else if (this.form.phone.length !== 16) this.errors.phone = 'Введите корректный номер телефона';
     },
     isFormValid() {
       // @ts-ignore
